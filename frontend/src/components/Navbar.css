@@ -1,0 +1,102 @@
+/* =========================
+   NAVBAR STYLING
+   ========================= */
+
+/* Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #007B83; /* Primary Teal Blue */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 100px;
+  cursor: pointer;
+}
+
+/* Links (Desktop) */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex: 1;
+  justify-content: center;
+  margin: 0;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  transition: color 0.3s ease;
+}
+
+.navbar-links li:hover {
+  color: #FF8A65; /* Soft Coral hover */
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: #ffffff;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* =========================
+   RESPONSIVE (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  /* Hide links by default on mobile */
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #F9FAFB; /* Light Gray Background */
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    display: none; /* FIX: no long horizontal line */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-left: 1px solid #E5E7EB; /* Neutral Divider */
+    border-bottom: 1px solid #E5E7EB;
+  }
+
+  /* Show menu when active */
+  .navbar-links.active {
+    display: flex;
+    padding: 15px 0;
+  }
+
+  .navbar-links li {
+    color: #1F2937; /* Dark Slate text */
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links li:hover {
+    background-color: #4DB6AC; /* Sky Blue hover */
+    color: #ffffff;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+}

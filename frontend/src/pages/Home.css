@@ -1,0 +1,130 @@
+/* =========================
+   Home Page Styling
+   ========================= */
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F9FAFB; /* Light Gray Background */
+  color: #1F2937; /* Dark Slate Text */
+  text-align: center;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1F2937;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #4DB6AC; /* Sky Blue Accent */
+}
+
+/* Highlight Label */
+.highlight {
+  background-color: #007B83; /* Primary Teal Blue */
+  color: white;
+  padding: 12px 24px;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.highlight:hover {
+  background-color: #4DB6AC; /* Sky Blue on Hover */
+}
+
+/* Image Section */
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.images img {
+  width: 480px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #E5E7EB; /* Neutral Border */
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.03);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #25d366; /* WhatsApp Green */
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+  .images {
+    gap: 20px;
+  }
+  .images img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+  .highlight {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
